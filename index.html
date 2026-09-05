@@ -63,8 +63,8 @@
     color:var(--on-bg);
   }
   .amp{
-    font-style:italic;
-    color:var(--rose);
+    font-style:normal;
+    color:var(--on-bg);
     font-weight:400;
   }
   .catch{
@@ -105,27 +105,27 @@
     margin-top:4px;
   }
   .card{
-    background:var(--card);
-    border:1px solid var(--line);
-    border-radius:4px;
-    padding:28px 26px;
-    margin-top:34px;
+    background:transparent;
+    border:none;
+    padding:28px 4px;
+    margin-top:20px;
   }
   .card h2{
     font-family:'Fraunces', serif;
     font-weight:500;
     font-size:20px;
     margin:0 0 14px;
-    color:var(--green);
+    color:var(--on-bg);
   }
   .venue-name{
     font-size:17px;
     font-weight:500;
+    color:var(--on-bg);
   }
   .venue-loc{
     font-size:15px;
-    color:var(--ink);
-    opacity:0.75;
+    color:var(--on-bg);
+    opacity:0.8;
     margin-top:2px;
   }
   .countdown{
@@ -140,19 +140,20 @@
   .countdown .num{
     font-family:'Fraunces', serif;
     font-size:30px;
-    color:var(--green);
+    color:var(--on-bg);
     font-weight:500;
   }
   .countdown .unit{
     font-size:12px;
-    color:var(--ink);
-    opacity:0.6;
+    color:var(--on-bg);
+    opacity:0.7;
     margin-top:2px;
   }
   .rsvp-card p.helper{
     font-size:14px;
     line-height:1.6;
-    opacity:0.8;
+    color:var(--on-bg);
+    opacity:0.85;
     margin:0 0 18px;
   }
   input[type=text]{
@@ -191,17 +192,17 @@
     margin-top:14px;
   }
   .btn-yes{ background:var(--green); color:#fff; flex:1; }
-  .btn-no{ background:transparent; color:var(--ink); border:1px solid var(--line); flex:1; }
+  .btn-no{ background:rgba(255,255,255,0.15); color:var(--on-bg); border:1px solid rgba(255,255,255,0.5); flex:1; }
   .status-msg{
     font-size:14px;
     line-height:1.6;
     padding:14px 16px;
     border-radius:3px;
-    background:rgba(169,118,47,0.12);
-    color:var(--green);
+    background:rgba(255,255,255,0.18);
+    color:var(--on-bg);
     margin-top:4px;
   }
-  .status-msg.no{ background:rgba(0,0,0,0.05); color:var(--ink); }
+  .status-msg.no{ background:rgba(0,0,0,0.15); color:var(--on-bg); }
   footer{
     text-align:center;
     margin-top:48px;
@@ -299,6 +300,7 @@
   .fade-in{ animation: fadeIn 0.6s ease both; }
   @keyframes fadeIn{ from{opacity:0; transform:translateY(6px);} to{opacity:1; transform:translateY(0);} }
   @media (prefers-reduced-motion: reduce){ .fade-in{ animation:none; } }
+  .hidden{ display:none; }
 </style>
 </head>
 <body>
@@ -360,7 +362,7 @@
   </div>
 
   <footer>
-    <div class="fmark">Can't wait to celebrate with you</div>
+    <div class="fmark">We can't wait to celebrate with you</div>
   </footer>
 
   <button class="admin-link" id="admin-toggle">Wedding team</button>
