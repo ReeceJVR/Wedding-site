@@ -13,14 +13,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg: #C9AEDE;
+    --bg: #FFFFFF;
     --card: #FFFFFF;
-    --ink: #171717;
-    --on-bg: #FFFFFF;
-    --green: #171717;
-    --gold: #8C6BB8;
-    --rose: #FFFFFF;
-    --line: rgba(0,0,0,0.12);
+    --ink: #3D2260;
+    --on-bg: #3D2260;
+    --light-purple: #9B7FC2;
+    --green: #3D2260;
+    --gold: #9B7FC2;
+    --rose: #9B7FC2;
+    --line: rgba(61,34,96,0.15);
   }
   *{box-sizing:border-box;}
   body{
@@ -41,7 +42,6 @@
     font-size:15px;
     letter-spacing:0.14em;
     color:var(--on-bg);
-    opacity:0.9;
   }
   .rule{
     width:44px;
@@ -63,23 +63,23 @@
     color:var(--on-bg);
   }
   .amp{
+    font-family:'Jost', sans-serif;
     font-style:normal;
-    color:var(--on-bg);
     font-weight:400;
+    color:var(--on-bg);
   }
   .catch{
     font-family:'Fraunces', serif;
     font-style:italic;
     font-size:19px;
     line-height:1.5;
-    color:var(--on-bg);
+    color:var(--light-purple);
     max-width:380px;
     margin:22px auto 6px;
   }
   .signoff{
     font-size:13px;
-    color:var(--on-bg);
-    opacity:0.85;
+    color:var(--light-purple);
     letter-spacing:0.06em;
   }
   .badge{
@@ -88,8 +88,7 @@
   }
   .badge .label{
     font-size:14px;
-    color:var(--on-bg);
-    opacity:0.9;
+    color:var(--light-purple);
     margin-bottom:8px;
   }
   .badge .date{
@@ -100,8 +99,7 @@
   }
   .badge .day{
     font-size:14px;
-    color:var(--on-bg);
-    opacity:0.75;
+    color:var(--light-purple);
     margin-top:4px;
   }
   .card{
@@ -124,8 +122,7 @@
   }
   .venue-loc{
     font-size:15px;
-    color:var(--on-bg);
-    opacity:0.8;
+    color:var(--light-purple);
     margin-top:2px;
   }
   .countdown{
@@ -145,15 +142,13 @@
   }
   .countdown .unit{
     font-size:12px;
-    color:var(--on-bg);
-    opacity:0.7;
+    color:var(--light-purple);
     margin-top:2px;
   }
   .rsvp-card p.helper{
     font-size:14px;
     line-height:1.6;
-    color:var(--on-bg);
-    opacity:0.85;
+    color:var(--light-purple);
     margin:0 0 18px;
   }
   input[type=text]{
@@ -192,17 +187,17 @@
     margin-top:14px;
   }
   .btn-yes{ background:var(--green); color:#fff; flex:1; }
-  .btn-no{ background:rgba(255,255,255,0.15); color:var(--on-bg); border:1px solid rgba(255,255,255,0.5); flex:1; }
+  .btn-no{ background:rgba(155,127,194,0.12); color:var(--on-bg); border:1px solid rgba(61,34,96,0.25); flex:1; }
   .status-msg{
     font-size:14px;
     line-height:1.6;
     padding:14px 16px;
     border-radius:3px;
-    background:rgba(255,255,255,0.18);
+    background:rgba(155,127,194,0.14);
     color:var(--on-bg);
     margin-top:4px;
   }
-  .status-msg.no{ background:rgba(0,0,0,0.15); color:var(--on-bg); }
+  .status-msg.no{ background:rgba(61,34,96,0.06); color:var(--on-bg); }
   footer{
     text-align:center;
     margin-top:48px;
@@ -211,15 +206,14 @@
     font-family:'Fraunces', serif;
     font-style:italic;
     font-size:15px;
-    color:var(--on-bg);
+    color:var(--light-purple);
   }
   .admin-link{
     display:block;
     text-align:center;
     margin-top:30px;
     font-size:12px;
-    color:var(--on-bg);
-    opacity:0.7;
+    color:var(--light-purple);
     background:none;
     border:none;
     text-decoration:underline;
@@ -284,7 +278,7 @@
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:12px;
-    margin-top:14px;
+    margin-top:36px;
   }
   .moments img{
     width:100%;
@@ -327,14 +321,6 @@
   </div>
 
   <div class="card">
-    <h2>A few of our moments</h2>
-    <div class="moments">
-      <img src="Images/moment-1.jpg" alt="Reece and Jessie-Leigh laughing on the beach">
-      <img src="Images/moment-2.jpg" alt="Reece proposing to Jessie-Leigh on the beach">
-    </div>
-  </div>
-
-  <div class="card">
     <h2>Where</h2>
     <div class="venue-name">Venue Nouveau</div>
     <div class="venue-loc">Equestria, Pretoria East</div>
@@ -364,6 +350,11 @@
   <footer>
     <div class="fmark">We can't wait to celebrate with you</div>
   </footer>
+
+  <div class="moments">
+    <img src="Images/moment-1.jpg" alt="Reece and Jessie-Leigh laughing on the beach">
+    <img src="Images/moment-2.jpg" alt="Reece proposing to Jessie-Leigh on the beach">
+  </div>
 
   <button class="admin-link" id="admin-toggle">Wedding team</button>
 
