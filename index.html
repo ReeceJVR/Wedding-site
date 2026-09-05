@@ -10,18 +10,18 @@
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Playfair+Display:ital,wght@0,600;0,700&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg: #FFFFFF;
+    --bg: #C9AEDE;
     --card: #FFFFFF;
-    --ink: #3D2260;
-    --on-bg: #3D2260;
-    --light-purple: #9B7FC2;
-    --green: #3D2260;
-    --gold: #9B7FC2;
-    --rose: #9B7FC2;
-    --line: rgba(61,34,96,0.15);
+    --ink: #171717;
+    --on-bg: #FFFFFF;
+    --light-purple: #171717;
+    --green: #FFFFFF;
+    --gold: #171717;
+    --rose: #171717;
+    --line: rgba(255,255,255,0.35);
   }
   *{box-sizing:border-box;}
   body{
@@ -55,8 +55,8 @@
     padding-top:34px;
   }
   .hero h1{
-    font-family:'Fraunces', serif;
-    font-weight:500;
+    font-family:'Playfair Display', serif;
+    font-weight:700;
     font-size:clamp(38px, 9vw, 56px);
     line-height:1.08;
     margin:0;
@@ -176,28 +176,28 @@
     cursor:pointer;
   }
   .btn-primary{
-    background:var(--green);
+    background:#171717;
     color:#fff;
     width:100%;
   }
-  .btn-primary:hover{ background:#1e2a20; }
+  .btn-primary:hover{ background:#000000; }
   .btn-row{
     display:flex;
     gap:12px;
     margin-top:14px;
   }
-  .btn-yes{ background:var(--green); color:#fff; flex:1; }
-  .btn-no{ background:rgba(155,127,194,0.12); color:var(--on-bg); border:1px solid rgba(61,34,96,0.25); flex:1; }
+  .btn-yes{ background:#171717; color:#fff; flex:1; }
+  .btn-no{ background:rgba(255,255,255,0.15); color:var(--on-bg); border:1px solid rgba(255,255,255,0.5); flex:1; }
   .status-msg{
     font-size:14px;
     line-height:1.6;
     padding:14px 16px;
     border-radius:3px;
-    background:rgba(155,127,194,0.14);
+    background:rgba(255,255,255,0.18);
     color:var(--on-bg);
     margin-top:4px;
   }
-  .status-msg.no{ background:rgba(61,34,96,0.06); color:var(--on-bg); }
+  .status-msg.no{ background:rgba(0,0,0,0.15); color:var(--on-bg); }
   footer{
     text-align:center;
     margin-top:48px;
@@ -230,7 +230,7 @@
     font-family:'Fraunces', serif;
     font-size:17px;
     margin:0 0 14px;
-    color:var(--green);
+    color:#171717;
   }
   .toggle-row{
     display:flex;
@@ -252,7 +252,7 @@
     margin:14px 0;
     font-size:14px;
   }
-  .tally b{ font-family:'Fraunces', serif; font-size:20px; display:block; color:var(--green); }
+  .tally b{ font-family:'Fraunces', serif; font-size:20px; display:block; color:#171717; }
   .hero-photo{
     width:100%;
     aspect-ratio: 3 / 4;
@@ -274,6 +274,9 @@
   }
   .hero-photo-overlay .monogram{ color:#fff; opacity:0.95; }
   .hero-photo-overlay .rule{ background:#fff; opacity:0.7; }
+  .hero-photo-overlay .badge{ margin-top:16px; }
+  .hero-photo-overlay .badge .label{ color:rgba(255,255,255,0.85); }
+  .hero-photo-overlay .badge .day{ color:rgba(255,255,255,0.85); }
   .moments{
     display:grid;
     grid-template-columns:1fr 1fr;
@@ -305,6 +308,11 @@
     <div class="hero-photo-overlay">
       <div class="monogram">R &amp; J</div>
       <div class="rule"></div>
+      <div class="badge">
+        <div class="label">Save the date</div>
+        <div class="date">10 April 2027</div>
+        <div class="day">Saturday</div>
+      </div>
     </div>
   </div>
 
@@ -312,12 +320,6 @@
     <h1>Reece <span class="amp">&amp;</span> Jessie-Leigh</h1>
     <p class="catch">A day filled with love, laughter, and a long last name.</p>
     <p class="signoff">— The JVRs</p>
-  </div>
-
-  <div class="badge">
-    <div class="label">Save the date</div>
-    <div class="date">10 April 2027</div>
-    <div class="day">Saturday</div>
   </div>
 
   <div class="card">
