@@ -258,7 +258,44 @@
     font-size:14px;
   }
   .tally b{ font-family:'Fraunces', serif; font-size:20px; display:block; color:var(--green); }
-  .hidden{ display:none; }
+  .hero-photo{
+    width:100%;
+    aspect-ratio: 3 / 4;
+    max-height:640px;
+    object-fit:cover;
+    display:block;
+    border-radius:0 0 4px 4px;
+  }
+  .hero-photo-wrap{
+    position:relative;
+    margin: -56px -24px 0;
+  }
+  .hero-photo-overlay{
+    position:absolute;
+    left:0; right:0; bottom:0;
+    padding:36px 24px 28px;
+    background:linear-gradient(to top, rgba(50,29,60,0.55), rgba(50,29,60,0));
+    text-align:center;
+  }
+  .hero-photo-overlay .monogram{ color:#fff; opacity:0.95; }
+  .hero-photo-overlay .rule{ background:#fff; opacity:0.7; }
+  .moments{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+    margin-top:14px;
+  }
+  .moments img{
+    width:100%;
+    height:170px;
+    object-fit:cover;
+    border-radius:3px;
+    display:block;
+  }
+  @media (max-width:420px){
+    .moments{ grid-template-columns:1fr; }
+    .moments img{ height:220px; }
+  }
   .fade-in{ animation: fadeIn 0.6s ease both; }
   @keyframes fadeIn{ from{opacity:0; transform:translateY(6px);} to{opacity:1; transform:translateY(0);} }
   @media (prefers-reduced-motion: reduce){ .fade-in{ animation:none; } }
@@ -267,8 +304,13 @@
 <body>
 <div class="wrap">
 
-  <div class="monogram">R &amp; J</div>
-  <div class="rule"></div>
+  <div class="hero-photo-wrap">
+    <img class="hero-photo" src="images/hero.jpg" alt="Reece and Jessie-Leigh on the beach">
+    <div class="hero-photo-overlay">
+      <div class="monogram">R &amp; J</div>
+      <div class="rule"></div>
+    </div>
+  </div>
 
   <div class="hero fade-in">
     <h1>Reece <span class="amp">&amp;</span> Jessie-Leigh</h1>
@@ -280,6 +322,14 @@
     <div class="label">Save the date</div>
     <div class="date">10 April 2027</div>
     <div class="day">Saturday</div>
+  </div>
+
+  <div class="card">
+    <h2>A few of our moments</h2>
+    <div class="moments">
+      <img src="images/moment-1.jpg" alt="Reece and Jessie-Leigh laughing on the beach">
+      <img src="images/moment-2.jpg" alt="Reece proposing to Jessie-Leigh on the beach">
+    </div>
   </div>
 
   <div class="card">
@@ -336,7 +386,7 @@
 
 <script>
 // Paste the Web App URL you get from Google Apps Script (Deploy > New deployment) here:
-const APPS_SCRIPT_URL = "PASTE_YOUR_URL_HERE";
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw556dNeL82IM4MUGAHQ9IaB5DF6UmTJPYxyLNQrYohlcQ-vdOsCR_M8gaY9Tbo90Eg/exec";
 
 const ADMIN_PASSPHRASE = "jvr2027";
 const WEDDING_DATE = new Date("2027-04-10T14:00:00");
