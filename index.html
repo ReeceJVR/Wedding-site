@@ -66,7 +66,9 @@
     font-family:'Jost', sans-serif;
     font-style:normal;
     font-weight:400;
+    font-size:0.65em;
     color:var(--on-bg);
+    padding:0 2px;
   }
   .catch{
     font-family:'Fraunces', serif;
@@ -280,15 +282,16 @@
   }
   .mid-photo{
     width:100%;
-    height:320px;
+    height:400px;
     object-fit:cover;
+    object-position:center 25%;
     display:block;
   }
   .mid-photo-overlay{
     position:absolute;
     left:0; right:0; bottom:0;
-    padding:28px 24px 24px;
-    background:linear-gradient(to top, rgba(50,29,60,0.55), rgba(50,29,60,0));
+    padding:36px 24px 28px;
+    background:linear-gradient(to top, rgba(50,29,60,0.6), rgba(50,29,60,0) 70%);
     text-align:center;
   }
   .mid-photo-overlay .badge{ margin:0; }
@@ -301,6 +304,7 @@
     width:100%;
     height:280px;
     object-fit:cover;
+    object-position:top center;
     display:block;
   }
   .fade-in{ animation: fadeIn 0.6s ease both; }
