@@ -368,7 +368,7 @@
   <div class="admin-panel hidden" id="admin-panel">
     <div id="admin-login">
       <h3>Wedding team login</h3>
-      <input type="text" id="admin-key" placeholder="Passphrase">
+      <input type="text" id="admin-key" placeholder="Passphrase" autocapitalize="off" autocorrect="off" spellcheck="false">
       <button class="btn-primary" id="admin-login-btn">Log in</button>
     </div>
     <div id="admin-dashboard" class="hidden">
@@ -512,8 +512,7 @@ document.getElementById("admin-toggle").addEventListener("click", () => {
 });
 
 document.getElementById("admin-login-btn").addEventListener("click", async () => {
-  const key = document.getElementById("admin-key").value.trim();
-  if(key === ADMIN_PASSPHRASE){
+  const key = document.getElementById("admin-key").value.trim();  if(key === ADMIN_PASSPHRASE){
     document.getElementById("admin-login").classList.add("hidden");
     document.getElementById("admin-dashboard").classList.remove("hidden");
     await loadAdminDashboard(key);
